@@ -12,7 +12,7 @@ function ListaCategorias() {
 
   async function buscarCategorias() {
     try {
-      await buscar("/temas", setCategorias, {});
+      await buscar("/categorias", setCategorias, {});
     } catch (error: any) {
       console.log(error);
     }
@@ -42,6 +42,16 @@ function ListaCategorias() {
                 <CardCategorias categoria={categoria} />
               </>
             ))}
+
+            <CardCategorias
+              categoria={{ id: 0, nome: "Medicamento Genérico" }}
+            />
+            <CardCategorias
+              categoria={{ id: 1, nome: "Medicamento Manipulado" }}
+            />
+            <CardCategorias
+              categoria={{ id: 3, nome: "Medicamento Similar" }}
+            />
           </div>
         </div>
       </div>
